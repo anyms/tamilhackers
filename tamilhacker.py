@@ -26,7 +26,8 @@ class TamilHackers(Cmd):
 		f.write(str(int(name) + 1))
 		f.close()
 
-		os.system("git add .")
+		os.system("git add {}.png".format(name))
+		os.system("git add {}.mp4".format(name))
 		os.system('''git commit -m "{} video and thumb added"'''.format(name))
 		os.system("git push origin master")
 
